@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0, auto;
+    color: midnightblue;
+
+}
+header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    max-width: 2000px;
+    width: 100%;
+    background-color: #f0f8ff;
+    top: 0;
+    z-index: 1000;
+}
+nav {
+    padding: 10px;
+}
+a {
+    text-decoration: none;
+}
+nav a, header a {
+    margin: 0 15px;
+    color: midnightblue;
+    font-weight: bold;
+}
+img {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 100px;
+    display: block;
+}
+#content {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: left;
+}
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: midnightblue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
