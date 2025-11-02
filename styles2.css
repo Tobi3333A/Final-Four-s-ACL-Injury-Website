@@ -6,6 +6,7 @@ body {
     margin: 0, auto;
     color: midnightblue;
     margin: 0px;
+    text-align: center;
 }
 header {
     display: flex;
@@ -55,6 +56,9 @@ footer {
     margin: 0 auto;
     gap: 80px;
     padding: 20px;
+}
+#text {
+    max-width: 600px;
 }
 #abouts p, #abouts li {
     color: green;
