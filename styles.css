@@ -152,6 +152,8 @@ footer {
 @media (max-width: 768px) {
     #banner, #athletes {
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     .blog-post img, .ride img, .athlete-img img {
         width: 300px;
