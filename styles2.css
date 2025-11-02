@@ -6,7 +6,6 @@ body {
     margin: 0, auto;
     color: midnightblue;
     margin: 0px;
-    text-align: center;
 }
 header {
     display: flex;
@@ -18,6 +17,7 @@ header {
     background-color: #f0f8ff;
     top: 0;
     z-index: 1000;
+    text-align: center;
 }
 nav {
     padding: 10px;

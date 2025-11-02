@@ -42,12 +42,10 @@ nav a, header a {
     padding: 50px 20px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    
+    justify-content: space-around;   
     align-items: center;
     max-width: 1200px;
     width: 100%;
-    
 }
 #intro, .athlete {
     margin-left: 40px;
@@ -57,7 +55,6 @@ nav a, header a {
 }
 .ride, .athlete-img{
     margin-right: 40px;
-    
 }
 .ride img, .athlete-img img{
     border-radius: 10px;
@@ -110,7 +107,7 @@ button {
 }
 .blog-post img {
     border-radius: 5px;
-    max-width: 600px;
+    max-width: 80%;
 }
 .blog-post p {
     text-align: center;
