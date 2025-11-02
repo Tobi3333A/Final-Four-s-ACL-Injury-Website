@@ -9,7 +9,7 @@ body {
 }
 header {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     position: fixed;
     max-width: 2000px;
@@ -48,6 +48,7 @@ footer {
 #abouts {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     max-width: 1200px;
