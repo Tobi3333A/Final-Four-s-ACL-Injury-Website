@@ -150,6 +150,6 @@ footer {
         align-items: center;
     }
     .blog-post img, .ride img, .athlete-img img {
-        width: 300px;
+        width: 200px;
     }
 }
