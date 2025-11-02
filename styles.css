@@ -49,14 +49,8 @@ nav a, header a {
     max-width: 1200px;
     width: 100%;
 }
-#intro, .athlete {
-    margin-left: 40px;
-}
 #intro h1, .athlete h1 {
     font-size: 2.1rem;
-}
-.ride, .athlete-img{
-    margin-right: 40px;
 }
 .ride img, .athlete-img img{
     border-radius: 10px;
@@ -156,6 +150,6 @@ footer {
         align-items: center;
     }
     .blog-post img, .ride img, .athlete-img img {
-        width: 300px;
+        max-width: 400px;
     }
 }
