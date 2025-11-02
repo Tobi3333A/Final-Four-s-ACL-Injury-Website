@@ -87,6 +87,16 @@ X_train_scaled = scaler.fit_transform(X_train)
 X_test_scaled = scaler.transform(X_test)
 
 
+X_train_scaled = pd.DataFrame(
+    scaler.fit_transform(X_train),
+    columns=X_train.columns
+)
+X_test_scaled = pd.DataFrame(
+    scaler.transform(X_test),
+    columns=X_test.columns
+)
+
+
 # Training the model
 model = RandomForestRegressor(
     n_estimators=200,
@@ -111,46 +121,3 @@ print("Mean Squared Error:", round(mse, 3))
 # Saving model
 joblib.dump(model, "acl_risk_model.pkl")
 joblib.dump(scaler, "scaler.pkl")
-
-
-
-
-# Load model and scaler
-model = joblib.load("acl_risk_model.pkl")
-scaler = joblib.load("scaler.pkl")
-
-st.title("🏃‍♂️ ACL Risk Score Predictor")
-
-# Inputs
-age = st.number_input("Age", 10, 50)
-recovery_days = st.number_input("Recovery Days", 0, 100)
-training_hours = st.number_input("Training Hours per Week", 0, 40)
-training_intensity = st.selectbox("Training Intensity", ["Low", "Medium", "High"])
-match_count = st.number_input("Match Count per Month", 0, 20)
-rest_days = st.number_input("Rest Between Training Days", 0, 7)
-weight = st.number_input("Weight (kg)", 30, 150)
-height = st.number_input("Height (cm)", 120, 220)
-
-# Prepare input
-input_df = pd.DataFrame({
-    "Age": [age],
-    "Recovery Days": [recovery_days],
-    "Training Hours": [training_hours],
-    "Training Intensity": [training_intensity],
-    "Match Count": [match_count],
-    "Rest Between Days": [rest_days],
-    "Weight": [weight],
-    "Height": [height]
-})
-
-input_df = pd.get_dummies(input_df, columns=["Training Intensity"], drop_first=True)
-for col in model.feature_names_in_:
-    if col not in input_df.columns:
-        input_df[col] = 0
-input_df = input_df[model.feature_names_in_]
-
-# Scale and predict
-scaled = scaler.transform(input_df)
-prediction = model.predict(scaled)[0]
-
-st.subheader(f"Predicted ACL Risk Score: {prediction:.2f}")

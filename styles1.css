@@ -1,17 +1,10 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0, auto;
-    color: midnightblue;
+    text-align: center;
+    margin: 0px;
 }
-#home {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    text-align: left;
-    max-width: 10000px;
-    margin-top: 100px;
-}
+
 header {
     display: flex;
     justify-content: space-evenly;
@@ -34,20 +27,74 @@ nav a, header a {
     color: midnightblue;
     font-weight: bold;
 }
-#intro-img img{
-    max-width: 1200px;
-    max-height: 650px;
-    width: 100%;
+.erd, footer {
+    color: midnightblue;
 }
-form {
-    display: flex;
-    flex-direction: column;
+main {
+    padding-top: 20px;
+    opacity: 0.95;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('images/pattern.png');
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 0px;
+}
+main h2 {
+    text-align: center;
+    margin-top: 100px;
+}
+.contact-form{
+    max-width: 800px;
+    max-height: 500px;
+    border: thin solid rgb(12, 12, 240);
+    box-shadow: 0 0 7px white;
+    border-radius: 10px;
+    padding: 0px 30px;
+    margin-bottom: 30px;
+    background-color: #f0f8ff;
+    display: block;
+    justify-self: center;
+    box-shadow: 0 0 10px darkgreen;
+    line-height: 0.1;
+}
+input {
+    width: 80%;
+    padding: 15px;
     border: 1px solid #ccc;
-    padding: 20px;
     border-radius: 5px;
-    margin: 20px;
-    max-width: 1200px;
-    width: 100%;
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fa-brands {
+    font-size: 30px;
+    margin: 0 10px;
+    border: 1px solid midnightblue;
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#cred {
+    max-width: 400px;
+    margin: 0 auto;
+}
+.line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.line::before, .line::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #000;
+}
+.line:not(:empty)::before {
+  margin-right: .75em;
+}
+.line:not(:empty)::after {
+  margin-left: .75em;
 }
 button {
     padding: 10px 20px;
@@ -61,8 +108,7 @@ button {
 footer {
     background-color: #f0f8ff;
     text-align: center;
-    padding: 20px 0;
-    margin-top: 30px;
+    padding: 22px 0;
     max-width: 2000px;
     width: 100%;
 }

@@ -1,7 +1,11 @@
+.one {
+    color: darkgreen;
+}
 body {
     font-family: Arial, sans-serif;
     margin: 0, auto;
     color: midnightblue;
+    margin: 0px;
 }
 header {
     display: flex;
@@ -25,6 +29,14 @@ nav a, header a {
     color: midnightblue;
     font-weight: bold;
 }
+main {
+    margin-bottom: 80px;
+}
+main h1 {
+    text-align: center;
+    margin-top: 100px;
+    color: darkblue;
+}
 footer {
     background-color: #f0f8ff;
     text-align: center;
@@ -40,6 +52,8 @@ footer {
     justify-content: center;
     max-width: 1200px;
     margin: 0 auto;
+    gap: 80px;
+    padding: 20px;
 }
 #abouts p, #abouts li {
     color: green;
