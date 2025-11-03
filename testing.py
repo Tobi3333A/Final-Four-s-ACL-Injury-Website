@@ -27,7 +27,11 @@ X = df[[
     "Rest_Between_Events_Days",
     "Load_Balance_Score",
     "Weight_kg",
-    "Height_cm"
+    "Height_cm",
+    "BMI",
+    "Sport",
+    "Affiliation",
+    "Sex"
 ]]
 y = df["ACL_Risk_Score"]
 
@@ -52,7 +56,8 @@ factors = [
     "Rest_Between_Events_Days",
     "Load_Balance_Score",
     "Weight_kg",
-    "Height_cm"
+    "Height_cm",
+    "BMI"
 ]
 
 # Set a consistent plot style
@@ -74,6 +79,8 @@ for var in factors:
     plt.tight_layout()
     plt.show()
 
+
+X = pd.get_dummies(X, columns=["Sport", "Affiliation", "Sex"], drop_first=True)
 
     # Splitting dataset into train and test data
 X_train, X_test, y_train, y_test = train_test_split(

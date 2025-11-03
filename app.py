@@ -13,19 +13,29 @@ st.title("🏃‍♂️ ACL Risk Score Predictor")
 
 
 # Inputs
-age = st.number_input("Age", 10, 50)
+age = st.number_input("Age", 13, 25)
+sex = st.selectbox("Sex", ["Male", "Female"])
+sport = st.selectbox("Sport", ["Basketball", "Football", "Soccer", "Lacrosse", "Gymnastics", "Other"])
+affiliation = st.selectbox("Affiliation", ["School", "College"])
+bmi = st.number_input("BMI", 10, 40)
 recovery_days = st.number_input("Recovery Days per Week", 0, 7)
 training_hours = st.number_input("Training Hours per Week", 0, 40)
 training_intensity = st.number_input("Training Intensity (1–5)", 1, 5)
 match_count = st.number_input("Match Count per Week", 0, 10)
 rest_days = st.number_input("Rest Between Events (days)", 0, 7)
 load_balance = st.number_input("Load Balance Score (0–10)", 0, 10)
-weight = st.number_input("Weight (kg)", 30, 150)
+weight = st.number_input("Weight (kg)", 45, 105)
 height = st.number_input("Height (cm)", 120, 220)
 
-# Prepare input (must match training column names exactly)
+
+
+# Preparing input
 input_df = pd.DataFrame({
     "Age": [age],
+    "Sex": [sex],
+    "Sport": [sport],
+    "Affiliation": [affiliation],
+    "BMI": [bmi],
     "Recovery_Days_Per_Week": [recovery_days],
     "Training_Hours_Per_Week": [training_hours],
     "Training_Intensity": [training_intensity],
