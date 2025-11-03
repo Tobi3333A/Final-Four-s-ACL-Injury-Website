@@ -20,24 +20,46 @@ function checkAnswers() {
 
         let score = 0;
         let total = Object.keys(answers).length;
+        let wrongAnswers = [];
 
-        // Loop through answers and check
         for (let q in answers) {
             let selected = document.querySelector(`input[name="${q}"]:checked`);
             if (selected) {
-            if (selected.value === answers[q]) {
-                score++;
-            }
-            }
+                if (selected.value === answers[q]) {
+                    score++;
+                } else {
+                    wrongAnswers.push({
+                        question: q,
+                        correct: answers[q],
+                        chosen: selected.value
+                    });
+                }
+            } else {
+                wrongAnswers.push({
+                    question: q,
+                    correct: answers[q],
+                    chosen: "Nothing"
+                })
+                }
         }
 
         // Display result
+        let message = ""
         const resultBox = document.getElementById("resultBox");
         if (score === total) {
-            resultBox.innerHTML = `Perfect! 🎉 You scored ${score} out of ${total}.`;
+            message = `Perfect! 🎉 You scored ${score} out of ${total}.`;
             resultBox.className = "result correct";
         } else {
-            resultBox.innerHTML = `You scored ${score} out of ${total}.`;
+            message = `You scored ${score} out of ${total}.`;
             resultBox.className = "result incorrect";
         }
+
+        if (wrongAnswers.length > 0) {
+            message += "<br><br><strong>Questions you got wrong:</strong><ul>";
+            wrongAnswers.forEach(item => {
+                message += `<li>${item.question.toUpperCase()}: You chose <strong>${item.chosen}</strong>, correct answer was <strong>option ${item.correct}</strong>.</li>`;
+            });
+            message += "</ul>";
+        }
+        resultBox.innerHTML = message;
     }
