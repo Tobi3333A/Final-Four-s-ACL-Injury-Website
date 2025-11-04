@@ -22,7 +22,7 @@ This project is an interactive and responsive website creted to help, majorly, w
 ### **AI & Real-Time Analysis**
 - Machine Learning Model (Random Forest) 
 - Python-based Real-Time Data Processing Pipelines
-### **Collaborationg & Communication**
+### **Collaboration & Communication**
 - Slack API
 - Formspree
 ### **Version Control & Deployment**
