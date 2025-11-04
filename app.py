@@ -16,7 +16,7 @@ st.title("🏃‍♂️ ACL Risk Score Predictor")
 age = st.number_input("Age", 13, 25)
 sex = st.selectbox("Sex", ["Male", "Female"])
 sport = st.selectbox("Sport", ["Basketball", "Football", "Soccer", "Lacrosse", "Gymnastics", "Other"])
-affiliation = st.selectbox("Affiliation", ["School", "College"])
+affiliation = st.selectbox("Affiliation", ["School", "Club"])
 bmi = st.number_input("BMI", 10, 40)
 recovery_days = st.number_input("Recovery Days per Week", 0, 7)
 training_hours = st.number_input("Training Hours per Week", 0, 40)
@@ -60,3 +60,11 @@ prediction = model.predict(scaled_df)[0]
 
 
 st.subheader(f"Predicted ACL Risk Score: {prediction:.2f}")
+
+if prediction > 4:
+    print("ACL risk too high! You're advised to contact a health professional. Do you want to be connected with a health proffesional?")
+    st.link_button("Get connected", "health.html")
+else:
+    print("You're good to go. Do you still want to be connected with a health professional?")
+    st.link_button("Get connected", "health.html")
+
