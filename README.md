@@ -32,4 +32,4 @@ This project is an interactive and responsive website creted to help, majorly, w
 ## How It Works
 It works just like a normal website. There are links to the ACL risk assessment checker; the blogs are shown on the homepage; there is an about page that tells you about the team; there is the Injury Tracker page (currently in development) that will allow users to create their accounts, so they can get personalized reports from an IoT device (a compression sleeve) my team designs.
 ## Future Improvements
-My team and I are still working on this project to make it a fully functional website that incorporates readings from a **compression sleeve**, gives **personalized advice**, **real-time analysis**, and **connects users** with each other to foster community.
+My team and I are still working on this project to make it a fully functional website that incorporates readings from a **compression sleeve**, gives **personalized advice**, and performs **real-time analysis** to give users important information on the way they move their legs.
