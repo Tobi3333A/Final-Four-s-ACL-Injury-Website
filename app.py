@@ -62,9 +62,9 @@ prediction = model.predict(scaled_df)[0]
 st.subheader(f"Predicted ACL Risk Score: {prediction:.2f}")
 
 if prediction > 4:
-    print("ACL risk too high! You're advised to contact a health professional. Do you want to be connected with a health proffesional?")
-    st.link_button("Get connected", "health.html")
+    st.error("ACL risk too high! You're advised to contact a health professional. Do you want to be connected with a health proffesional?")
+    st.link_button("Get connected", "https://tobi3333a.github.io/Final-Four-s-ACL-Injury-Website/health.html")
 else:
-    print("You're good to go. Do you still want to be connected with a health professional?")
-    st.link_button("Get connected", "health.html")
+    st.success("You're good to go. Do you still want to be connected with a health professional?")
+    st.link_button("Get connected", "https://tobi3333a.github.io/Final-Four-s-ACL-Injury-Website/health.html")
 
