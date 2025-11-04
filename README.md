@@ -4,6 +4,8 @@ This project is an interactive and responsive website creted to help, majorly, w
 ## Features
 - **Educational Blog Posts**: Includes blog posts to educate users on ACL injuries and also inlcudes tests to evaluate a user's understanding of the posts.
 - **ACL Risk Assessment**: Includes an ACL risk checker made using machine learning. A user is allowed to enter their data, and the system evaluates a user's risk of getting an ACL injury based on the entered data.
+- **Connection with Health Professionals**: The platform automatically suggests connecting users, with high ACL risk levels, with health professionals. This ensures that users receive professional oversight and intervention when necessary.
+- **Connection with Other Users**: To promote collaboration and community among athletes in the country, a dedicated Slack channel was established. This community will allow athletes, coaches, parents of athletes, and even health professionals to exchange insights and foster a supportive environment.
 ## Technologies Used
 ### **Frontend Development**
 - HTML5
@@ -16,7 +18,7 @@ This project is an interactive and responsive website creted to help, majorly, w
 ### **Machine Learning & Data Science**
 - Pandas
 - NumPy
-- Sciki-learn
+- Scikit-learn
 - Matplotlib
 - Joblib
 ### **AI & Real-Time Analysis**
