@@ -48,10 +48,8 @@ function checkAnswers() {
         const resultBox = document.getElementById("resultBox");
         if (score === total) {
             message = `Perfect! 🎉 You scored ${score} out of ${total}.`;
-            resultBox.className = "result correct";
         } else {
             message = `You scored ${score} out of ${total}.`;
-            resultBox.className = "result incorrect";
         }
 
         if (wrongAnswers.length > 0) {

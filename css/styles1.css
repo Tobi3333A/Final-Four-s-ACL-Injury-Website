@@ -33,7 +33,7 @@ nav a, header a {
 main {
     padding-top: 20px;
     opacity: 0.95;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('images/pattern.png');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('../images/pattern.png');
     background-size: cover;
     background-position: center;
     margin-bottom: 0px;
