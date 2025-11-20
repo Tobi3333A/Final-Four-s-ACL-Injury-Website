@@ -14,7 +14,7 @@ import joblib
 import streamlit as st
 
 # loading dataset
-df = pd.read_csv("../simulated_acl_dataset_v2.csv")
+df = pd.read_csv("simulated_acl_dataset_v2.csv")
 print(df.head())
 
 # setting up variables for predictive modeling

@@ -5,8 +5,8 @@ import streamlit as st
 
 
 # Load model and scaler
-model = joblib.load("../models/acl_risk_model.pkl")
-scaler = joblib.load("../models/scaler.pkl")
+model = joblib.load("models/acl_risk_model.pkl")
+scaler = joblib.load("models/scaler.pkl")
 
 
 st.title("🏃‍♂️ ACL Risk Score Predictor")
